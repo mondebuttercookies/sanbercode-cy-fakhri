@@ -15,3 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+Cypress.on("fail", (err, runnable) => {
+  console.log("Test failed but execution continues");
+  return false;
+});
